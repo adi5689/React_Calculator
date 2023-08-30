@@ -6,7 +6,7 @@ const  App = () => {
   const [input, setInput] = useState(''); 
   const calculateResult = (input) => {
     try {
-      const operators = ['+','-','*','/'];
+      const operators = ['+','-','*','/','%'];
       let operator = null;
 
       for(let i = 0; i<input.length; i++){
@@ -35,6 +35,9 @@ const  App = () => {
           break;
         case '/':
           result = operand1 / operand2;
+          break;
+        case '%':
+          result = (operand1 * operand2) / 100;
           break;
         default:
           throw new Error('Invalid operator');
