@@ -3,7 +3,7 @@ import './App.css';
 
 const  App = () => {
 
-  const [input, setInput] = useState('5689'); 
+  const [input, setInput] = useState(''); 
   const calculateResult = (input) => {
     try {
       const operators = ['+','-','*','/'];
